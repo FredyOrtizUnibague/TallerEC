@@ -8,10 +8,16 @@ public class aplicacion {
         Scanner sc = new Scanner(System.in);
         fibonacci fb = new fibonacci();
 
-        System.out.println(fb.fibochaBasico(7));
 
+        System.out.println("Ingrese el numero de iteraciones que desee: ");
+        int n = sc.nextInt();
 
+        System.out.println("Metodo Basico");
+        System.out.println(fb.fibochaBasico(n))
+        ;
 
+        System.out.println("Metodo Optimizado");
+        System.out.println(fb.fibonaOpt(n));
 
         sc.close();
     }

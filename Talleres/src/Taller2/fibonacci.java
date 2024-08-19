@@ -7,67 +7,41 @@ public class fibonacci {
     
     
 
-    public int getAnt() 
+    public String fibochaBasico(int n) 
     {
-        return ant;
-    }
+        long inicioTiempo = System.nanoTime();
 
-
-    public void setAnt(int ant) 
-    {
-        this.ant = ant;
-    }
-
-
-    public int getSig() 
-    {
-        return sig;
-    }
-
-
-    public void setSig(int sig) 
-    {
-        this.sig = sig;
-    }
-
-
-    public int getFib() 
-    {
-        return fib;
-    }
-
-
-    public void setFib(int fib) 
-    {
-        this.fib = fib;
-    }
-
-    public int fibochaBasico(int n) 
-    {
-        for (int i = 0; i <= n; i++)
+        ant = 0;
+        sig = 1;
+        System.out.println("f(0)"+"="+ant);
+        System.out.println("f(1)"+"="+sig);
+        for (int i = 2; i <= n; i++)
         {
-            fib = ant + sig;
+            fib = (ant) + (sig) ;
             ant = sig;
             sig = fib;
-            i++;
 
-            System.out.println("f("+i+")"+fib);
+            System.out.println("f("+i+")"+"="+fib);
         } 
-        return fib;
+        long finalTiempo = System.nanoTime();
+        long tiempoTotal = finalTiempo - inicioTiempo;
+        System.err.println("El tiempo en nanosgundos fue: " + tiempoTotal);
+        return "Ha sido exitoso";
     }
 
-    public int fibonaOpt (int n)
+    public String fibonaOpt (int n)
     {
-        if (n <= 1)
+        long inicioTiempo = System.nanoTime();
+       
+        for(int ant = 0, sig = 1, i = 0; i <= n; i++)
         {
-            return n;
+            System.out.println("f("+i+")"+"="+ ant);
+            sig = ant + (ant = sig);
         }
-
-        for (int i = 0; i <= n; i++ )
-        {
-            fib = ant + (ant = sig);
-        }
-        return fib;
+        long finalTiempo = System.nanoTime();
+        long tiempoTotal = finalTiempo - inicioTiempo;
+        System.err.println("El tiempo en nanosgundos fue: " + tiempoTotal);
+        return "Ha sido exitoso";
     }
 
 
