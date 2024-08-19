@@ -1,0 +1,2 @@
+Al calcular los tiempos nos damos cuenta que al simplificar las cosas podemos ser mas eficientes, solo ser un poco mejor con la logica de cada algoritmo, nos damos cuenta que 
+en el metodo basico nos aumenta usualmente una cifra que es significativa si lo que buscamos es eficiencia y menos complicación.
